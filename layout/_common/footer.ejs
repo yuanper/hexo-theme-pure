@@ -1,11 +1,17 @@
 <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
-	<%- partial('_common/social', null, {cache: !config.relative_link}) %>
+    <%- partial('_common/social', null, {cache: !config.relative_link}) %>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <div class="copyright">
     	<% if(theme.site.copyright) { %>
         &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>
         <% } %>
+        <div class="powered-by">
+            <span id="busuanzi_container_site_pv" style='display:none'>
+                本站总访问量:<span id="busuanzi_value_site_pv"></span>次
+            </span>
+        </div>
         <div class="publishby">
-        	<%= __('copyright.theme_by') %> <a href="https://github.com/cofess" target="_blank"> cofess </a><%= __('copyright.base_on') %> <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        	Hexo <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
         </div>
     </div>
 </footer>
